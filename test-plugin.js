@@ -78,6 +78,10 @@ function sendMessage() {
   }, true);
 }
 
+function tag() {
+  Front.attachTag('sss_self_serve_trials');
+}
+
 Front.on('conversation', function (data) {
   console.log('Conversation', data.conversation);
   console.log('Contact', data.contact);
