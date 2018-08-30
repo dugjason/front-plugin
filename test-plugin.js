@@ -21,7 +21,7 @@ function reply() {
 
 function replyWithMobileRecipient() {
   Front.reply({
-    to: ['+14156199776']
+    to: ['+14156199776'],
     body: 'Template reply'
   }, false, conversation);
 }
