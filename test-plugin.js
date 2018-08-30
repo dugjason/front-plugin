@@ -19,6 +19,13 @@ function reply() {
   }, false, conversation);
 }
 
+function replyWithMobileRecipient() {
+  Front.reply({
+    to: ['+14156199776']
+    body: 'Template reply'
+  }, false, conversation);
+}
+
 function alertDialog() {
   Front.dialog('alert', {
     title: 'I\'m an alert dialog',
