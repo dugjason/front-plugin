@@ -19,6 +19,12 @@ function reply() {
   }, false, conversation);
 }
 
+function replyBodyOnly() {
+  Front.reply({
+    body: 'reply body'
+  }, false, conversation)
+}
+
 function replyWithMobileRecipient() {
   Front.reply({
     to: ['+14156199776'],
