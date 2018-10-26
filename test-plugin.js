@@ -95,6 +95,16 @@ function tag() {
   Front.attachTag('sss_self_serve_trials');
 }
 
+function addTopic() {
+  Front.addTopic({
+      type: 'web',
+      name: 'Link example',
+      ext_link: 'http://example.com'
+  }, function() {
+      console.log('Added topic');
+  });
+}
+
 Front.on('conversation', function (data) {
   console.log('Conversation', data.conversation);
   console.log('Contact', data.contact);
