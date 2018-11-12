@@ -13,10 +13,11 @@ function toggleTrashed() {
 }
 
 function reply() {
+  let replyAll = false;
   Front.reply({
     body: 'Template reply',
     subject: 'Template subject',
-  }, false, conversation);
+  }, replyAll);
 }
 
 function replyBodyOnly() {
