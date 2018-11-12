@@ -17,7 +17,7 @@ function reply() {
   Front.reply({
     body: 'Template reply',
     subject: 'Template subject',
-  }, replyAll);
+  }, replyAll, conversation);
 }
 
 function replyBodyOnly() {
