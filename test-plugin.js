@@ -12,12 +12,20 @@ function toggleTrashed() {
   Front.toggleTrashed(conversation);
 }
 
-function reply() {
+function replyOld() {
   let replyAll = false;
   Front.reply({
-    body: 'Template reply',
+    body: 'Template reply OLD',
     subject: 'Template subject',
   }, replyAll, conversation);
+}
+
+function replyNew() {
+  let replyAll = false;
+  Front.reply({
+    body: 'Template reply NEW',
+    subject: 'Template subject',
+  }, replyAll);
 }
 
 function replyBodyOnly() {
