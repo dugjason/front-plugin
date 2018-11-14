@@ -41,6 +41,10 @@ function replyWithMobileRecipient() {
   }, false, conversation);
 }
 
+function replyHtml() {
+  Front.insertHTML('<b>This is</b> Automatically inserted <i>HTML</i>');
+}
+
 function alertDialog() {
   Front.dialog('alert', {
     title: 'I\'m an alert dialog',
