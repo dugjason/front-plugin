@@ -45,6 +45,10 @@ function replyHtml() {
   Front.insertHTML('<b>This is</b> Automatically inserted <i>HTML</i>');
 }
 
+function replyFrontIcon() {
+  Front.insertHTML('<img src="https://frontapp.com/assets/img/favicons/favicon-128x128.png" />');
+}
+
 function alertDialog() {
   Front.dialog('alert', {
     title: 'I\'m an alert dialog',
