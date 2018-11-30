@@ -30,8 +30,8 @@ function replyNew() {
 
 function replyBodyOnly() {
   Front.reply({
-    body: 'reply body'
-  }, false, conversation)
+    body: 'Added reply body from Plugin'
+  }, false)
 }
 
 function replyWithMobileRecipient() {
