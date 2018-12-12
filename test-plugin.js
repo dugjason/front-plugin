@@ -34,6 +34,12 @@ function replyBodyOnly() {
   }, false)
 }
 
+function replywithCannedVariable() {
+  Front.reply({
+    body: '{{user.name}} is adding a reply containing a canned response variable'
+  }, false)
+}
+
 function replyWithMobileRecipient() {
   Front.reply({
     to: ['+14156199776'],
