@@ -133,6 +133,15 @@ function composeTest() {
   Front.compose({ to: [email] });
 }
 
+function composeIncludeLink() {
+  Front.compose({
+    from: 'support@frontapp.com',
+    to: ['jason@frontapp.com'],
+    subject: "Testing Composer including a URL",
+    body: "Testing this plugin function <a href='https://example.com'>example.com</a>"
+  })
+}
+
 Front.on('conversation', function (data) {
   console.log('Conversation', data.conversation);
   console.log('Contact', data.contact);
