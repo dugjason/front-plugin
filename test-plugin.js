@@ -149,4 +149,6 @@ Front.on('conversation', function (data) {
   console.log('OtherMessages', data.otherMessages);
   console.log('Full data', data);
   conversation = data.conversation;
+
+  requester.innerHTML = data.contact.handle;
 });
