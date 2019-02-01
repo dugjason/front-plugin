@@ -133,6 +133,10 @@ function composeTest() {
   Front.compose({ to: [email] });
 }
 
+function openURL() {
+  Front.openUrl('https://www.example.com');
+}
+
 function composeIncludeLink() {
   Front.compose({
     from: 'support@frontapp.com',
