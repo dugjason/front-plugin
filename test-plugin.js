@@ -133,6 +133,14 @@ function composeTest() {
   Front.compose({ to: [email] });
 }
 
+function composeSms() {
+  Front.compose({
+    from: '+14153017372',
+    to: ['+14156199776'],
+    hide_composer: false,
+  });
+}
+
 function openURL() {
   Front.openUrl('https://www.example.com');
 }
@@ -154,5 +162,11 @@ Front.on('conversation', function (data) {
   console.log('Full data', data);
   conversation = data.conversation;
 
+  var frontUser = Front.user;
+  console.log('Front user', frontUser);
+  var userContent = document.getElementById("user").innerHTML;
+  userContent = frontUser;
+
+  user.innerHTML = JSON.stringify(frontUser);
   requester.innerHTML = data.contact.handle;
 });
