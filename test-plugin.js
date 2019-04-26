@@ -128,7 +128,7 @@ function addTopic() {
   });
 }
 
-function composeTest() {
+function composeEmail() {
   let recipient = 'jason@frontapp.com';
   Front.compose({
     from: 'support@frontapp.com',
