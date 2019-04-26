@@ -129,15 +129,18 @@ function addTopic() {
 }
 
 function composeTest() {
-  var email = 'jason@frontapp.com';
-  Front.compose({ to: [email] });
+  let recipient = 'jason@frontapp.com';
+  Front.compose({
+    from: 'support@frontapp.com',
+    to: [email]
+  });
 }
 
 function composeSms() {
+  let recipient = '+14156199776';
   Front.compose({
     from: '+14153017372',
-    to: ['+14156199776'],
-    hide_composer: false,
+    to: [recipient]
   });
 }
 
