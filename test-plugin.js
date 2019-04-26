@@ -132,7 +132,7 @@ function composeEmail() {
   let recipient = 'jason@frontapp.com';
   Front.compose({
     from: 'support@frontapp.com',
-    to: [email]
+    to: [recipient]
   });
 }
 
