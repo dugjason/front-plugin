@@ -115,7 +115,7 @@ function sendMessage() {
 }
 
 function tag() {
-  Front.attachTag('sss_self_serve_trials');
+  Front.attachTag('star');
 }
 
 function addTopic() {
