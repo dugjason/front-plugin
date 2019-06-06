@@ -177,7 +177,7 @@ function showFuzzyLists() {
       }, function (item2) {
         Front.alert({
           title: 'Alert',
-          message: 'You clicked ', item2.title
+          message: 'You clicked ' + item2.title
         });
       });
     else
