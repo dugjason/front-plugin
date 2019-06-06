@@ -157,6 +157,31 @@ function composeIncludeLink() {
   })
 }
 
+function showFuzzyLists() {
+  Front.fuzzylist({
+    items: [
+        {title: 'L1 - Options 1'},
+        {title: 'L1 - Options 2'},
+        {title: 'L1 - Options 3'}
+    ]
+  }, function (item) {
+    if (item)
+      Front.fuzzylist({
+        items: [
+          {title: 'L2 - Options 1'},
+          {title: 'L2 - Options 2'},
+          {title: 'L2 - Options 3'},
+          {title: 'L2 - Options 5'},
+          {title: 'L2 - Options 4'}
+        ]
+      }, function (item2) {
+        console.log(item2);
+      });
+    else
+      console.log('User canceled');
+  });
+}
+
 Front.on('conversation', function (data) {
   console.log('Conversation', data.conversation);
   console.log('Contact', data.contact);
