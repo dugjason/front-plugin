@@ -178,7 +178,7 @@ function showFuzzyLists() {
         Front.alert({
           title: 'Alert',
           message: 'You clicked ' + item2.title
-        });
+        },()=>{});
       });
     else
       console.log('User canceled');
