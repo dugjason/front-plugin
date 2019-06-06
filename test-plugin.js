@@ -175,7 +175,10 @@ function showFuzzyLists() {
           {title: 'L2 - Options 4'}
         ]
       }, function (item2) {
-        Front.alert('You clicked ', item2.title);
+        Front.alert({
+          title: 'Alert',
+          message: 'You clicked ', item2.title
+        });
       });
     else
       console.log('User canceled');
