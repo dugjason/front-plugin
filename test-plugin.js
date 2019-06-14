@@ -162,7 +162,8 @@ function showFuzzyLists() {
     items: [
         {title: 'L1 - Options 1'},
         {title: 'L1 - Options 2'},
-        {title: 'L1 - Options 3'}
+        {title: 'L1 - Options 3'},
+        {title: 'L1 - Options 4'}
     ]
   }, function (item) {
     if (item)
