@@ -40,6 +40,28 @@ function replywithCannedVariable() {
   }, false)
 }
 
+function replyWithAttachment() {
+  const attachmentUid = (message.attachments[0] && message.attachments[0].uid) || undefined;
+  Front.reply({
+    to: ['someone@somewhere.com'],
+    subject: 'Optional subject',
+    body: 'Optional body',
+    attachment_uids: [attachmentUid]
+  }, false);
+}
+
+function newMessagewithAttachment() {
+  const attachmentUid = (message.attachments[0] && message.attachments[0].uid) || undefined;
+  Front.compose({
+    to: ['someone@somewhere.com'],
+    subject: 'Optional subject',
+    body: 'Optional body',
+    attachment_uids: [attachmentUid],
+    hide_composer: false
+  }, false);
+}
+
+
 function replyWithMobileRecipient() {
   Front.reply({
     to: ['+14156199776'],
@@ -193,6 +215,7 @@ Front.on('conversation', function (data) {
   console.log('OtherMessages', data.otherMessages);
   console.log('Full data', data);
   conversation = data.conversation;
+  message = data.message;
 
   var frontUser = Front.user;
   console.log('Front user', frontUser);
