@@ -78,7 +78,7 @@ function replyFrontIcon() {
 }
 
 function alertDialog() {
-  Front.dialog('alert', {
+  Front.alert({
     title: 'I\'m an alert dialog',
     message: 'You are now alerted',
   }, function () {
@@ -87,7 +87,7 @@ function alertDialog() {
 }
 
 function confirmDialog() {
-  Front.dialog('confirm', {
+  Front.confirm({
     title: 'I\'m a confirm dialog',
     message: 'Do you confirm',
     okTitle: 'OK Button',
@@ -101,7 +101,7 @@ function confirmDialog() {
 }
 
 function promptDialog() {
-  Front.dialog('prompt', {
+  Front.prompt({
     title: 'I\'m a prompt dialog',
     message: 'Please enter something'
   }, function (data) {
