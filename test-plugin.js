@@ -140,6 +140,10 @@ function tag() {
   Front.attachTag('star');
 }
 
+function newTag() {
+  Front.attachTag('new_tag_' + Date.now());
+}
+
 function addTopic() {
   Front.addTopic({
       type: 'web',
