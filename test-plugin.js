@@ -885,8 +885,5 @@ Front.on('conversation', function (data) {
   var frontUser = Front.user;
   console.log('Front user', frontUser);
   var userContent = document.getElementById("user");
-  userContent = frontUser;
-
-  user.innerHTML = JSON.stringify(frontUser);
-  requester.innerHTML = data.contact.handle;
+  userContent.innerHTML = frontUser.given_name;
 });
