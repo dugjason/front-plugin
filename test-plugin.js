@@ -884,7 +884,7 @@ Front.on('conversation', function (data) {
 
   var frontUser = Front.user;
   console.log('Front user', frontUser);
-  var userContent = document.getElementById("user").innerHTML;
+  var userContent = document.getElementById("user");
   userContent = frontUser;
 
   user.innerHTML = JSON.stringify(frontUser);
