@@ -778,8 +778,9 @@ function fetchInboxes() {
 }
 
 function fetchDrafts() {
+  console.log('STARTING fetchDrafts()');
   Front.fetchDraft(function (draft) {
-    console.log('-- Logging draafts below --');
+    console.log('-- Logging drafts below --');
     console.log(draft);
     console.log('--');
     Front.report({
@@ -787,6 +788,7 @@ function fetchDrafts() {
         message: 'The draft was logged to the console'
     }, function() { null; });
   });
+  console.log('ENDING fetchDrafts()');
 }
 
 function sendMessage() {
