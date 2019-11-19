@@ -779,7 +779,9 @@ function fetchInboxes() {
 
 function fetchDrafts() {
   Front.fetchDraft(function (draft) {
+    console.log('-- Logging draafts below --');
     console.log(draft);
+    console.log('--');
     Front.report({
         title: 'Draft fetched',
         message: 'The draft was logged to the console'
