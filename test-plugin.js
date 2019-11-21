@@ -873,6 +873,15 @@ function windowOpen() {
   window.open('https://example.com', 'Opened window from Plugin', 'height=600,width=1050');
 }
 
+function showData(field) {
+  Front.alert({
+    title: 'Showing ' + field,
+    message: ''
+  },
+  console.log(data);
+  );
+}
+
 Front.on('conversation', function (data) {
   console.log('Conversation', data.conversation);
   console.log('Contact', data.contact);
