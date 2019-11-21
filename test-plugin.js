@@ -881,9 +881,9 @@ function showData(field) {
   Front.alert({
     title: 'Showing ' + field,
     message: ''
-  },
-  console.log(frontData)
-  );
+  }, () => {
+    console.log(frontData);
+  });
 }
 
 Front.on('conversation', function (data) {
