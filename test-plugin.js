@@ -1,5 +1,5 @@
 var conversation;
-var data;
+var frontData;
 
 function unassign() {
   Front.unassign(conversation);
@@ -895,6 +895,7 @@ Front.on('conversation', function (data) {
   console.log('OtherMessages', data.otherMessages);
   console.log('Full data', data);
   conversation = data.conversation;
+  frontData = data;
   message = data.message;
 
   var frontUser = Front.user;
