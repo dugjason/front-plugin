@@ -878,6 +878,8 @@ function showDataHasDraft() { showData('has_draft'); }
 function showDataInboxIds() { showData('inbox_ids'); }
 
 function showData(field) {
+  data;
+  conversation;
   Front.alert({
     title: 'Showing ' + field,
     message: ''
