@@ -1,4 +1,5 @@
 var conversation;
+var data;
 
 function unassign() {
   Front.unassign(conversation);
