@@ -885,7 +885,7 @@ function showData(field) {
 
   Front.alert({
     title: 'Showing ' + field,
-    message: showSwitch[field]
+    message: JSON.stringify(showSwitch[field])
   }, () => {
     console.log(frontData);
   });
