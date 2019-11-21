@@ -873,6 +873,9 @@ function windowOpen() {
   window.open('https://example.com', 'Opened window from Plugin', 'height=600,width=1050');
 }
 
+function showDataHasDraft() { showData('has_draft'); }
+function showDataInboxIds() { showData('inbox_ids'); }
+
 function showData(field) {
   Front.alert({
     title: 'Showing ' + field,
