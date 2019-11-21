@@ -878,12 +878,17 @@ function showDataHasDraft() { showData('has_draft'); }
 function showDataInboxIds() { showData('inbox_ids'); }
 
 function showData(field) {
-  const showSwitch = (showField) => ({
-    "has_draft": JSON.stringify(frontData.conversation.has_draft),
-    "inbox_ids": JSON.stringify(frontData.conversation.inbox_ids)
-  })[showField]
+  var fieldToShow;
 
-  var fieldToShow = showSwitch[field];
+  switch (field) {
+    case 'has_draft':
+      fieldToShow = JSON.stringify(frontData.conversation.has_draft);
+      break;
+
+    case 'inbox_ids':
+      fieldToShow = JSON.stringify(frontData.conversation.inbox_ids);
+      break;
+  }
 
   Front.alert({
     title: 'Showing ' + field,
