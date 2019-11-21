@@ -881,7 +881,7 @@ function showData(field) {
     title: 'Showing ' + field,
     message: ''
   },
-  console.log(data);
+  console.log(data)
   );
 }
 
