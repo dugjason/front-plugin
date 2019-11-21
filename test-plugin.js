@@ -890,7 +890,7 @@ function showData(field) {
       break;
   }
 
-  fieldToShow ? fieldToShow = 'undefined' : null;
+  !fieldToShow ? fieldToShow = 'undefined' : null;
 
   Front.alert({
     title: 'Showing ' + field,
