@@ -918,6 +918,13 @@ Front.on('conversation', function (data) {
   frontData = data;
   message = data.message;
 
+  Front.alert({
+    title: 'Showing message',
+    message: JSON.stringify(data.message)
+  }, () => {
+    console.log(data);
+  });
+
   var frontUser = Front.user;
   console.log('Front user', frontUser);
   var userContent = document.getElementById("frontUser");
