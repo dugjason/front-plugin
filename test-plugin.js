@@ -894,7 +894,7 @@ function showData(field) {
       fieldToShow = JSON.stringify(frontData.other_messages);
       break;
 
-    case default:
+    default:
       fieldToShow = 'No switch option found';
   }
 
