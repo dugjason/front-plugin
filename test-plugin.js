@@ -891,7 +891,7 @@ function showData(field) {
       break;
 
     case 'other_messages':
-      fieldToShow = JSON.stringify(frontData.other_messages);
+      fieldToShow = JSON.stringify(frontData.otherMessages);
       break;
 
     default:
