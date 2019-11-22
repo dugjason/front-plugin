@@ -888,6 +888,14 @@ function showData(field) {
     case 'inbox_ids':
       fieldToShow = JSON.stringify(frontData.conversation.inbox_ids);
       break;
+
+    case: 'message':
+      fieldToShow = JSON.stringify(frontData.message);
+      break;
+
+    case: 'other_messages':
+      fieldToShow = JSON.stringify(frontData.other_messages);
+      break;
   }
 
   !fieldToShow ? fieldToShow = 'undefined' : null;
