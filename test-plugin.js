@@ -874,9 +874,6 @@ function windowOpen() {
   window.open('https://example.com', 'Opened window from Plugin', 'height=600,width=1050');
 }
 
-function showDataHasDraft() { showData('has_draft'); }
-function showDataInboxIds() { showData('inbox_ids'); }
-
 function showData(field) {
   var fieldToShow;
 
@@ -889,13 +886,16 @@ function showData(field) {
       fieldToShow = JSON.stringify(frontData.conversation.inbox_ids);
       break;
 
-    case: 'message':
+    case 'message':
       fieldToShow = JSON.stringify(frontData.message);
       break;
 
-    case: 'other_messages':
+    case 'other_messages':
       fieldToShow = JSON.stringify(frontData.other_messages);
       break;
+
+    case default:
+      fieldToShow = 'No switch option found';
   }
 
   !fieldToShow ? fieldToShow = 'undefined' : null;
