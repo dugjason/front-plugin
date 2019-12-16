@@ -908,6 +908,20 @@ function showData(field) {
   });
 }
 
+/*
+ * Drag + Drop handler
+ */
+function dragover_handler(ev) {
+ ev.preventDefault();
+ ev.dataTransfer.dropEffect = "move";
+}
+function drop_handler(ev) {
+ ev.preventDefault();
+ // Get the id of the target and add the moved element to the target's DOM
+ var data = ev.dataTransfer.getData("text/plain");
+ ev.target.appendChild(document.getElementById(data));
+}
+
 Front.on('conversation', function (data) {
   console.log('Conversation', data.conversation);
   console.log('Contact', data.contact);
