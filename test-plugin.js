@@ -913,7 +913,7 @@ function moveToInboxByAlias() {
 }
 
 
-function moveToInboxByID() {
+function moveToInboxById() {
   Front.moveToInbox('inb_qyt');
 }
 
