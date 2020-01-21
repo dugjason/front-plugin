@@ -908,6 +908,15 @@ function showData(field) {
   });
 }
 
+function moveToInboxByAlias() {
+  Front.moveToInbox('support_tier_1');
+}
+
+
+function moveToInboxByID() {
+  Front.moveToInbox('inb_qyt');
+}
+
 /*
  * Drag + Drop handler
  */
