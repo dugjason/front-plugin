@@ -948,3 +948,7 @@ Front.on('conversation', function (data) {
   var userContent = document.getElementById("frontUser");
   userContent.innerHTML = frontUser.given_name;
 });
+
+Front.on('panel_visible', function (visible) {
+  console.log('Visible', visible);
+});
