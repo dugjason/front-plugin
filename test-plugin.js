@@ -839,6 +839,11 @@ function composeSmsWithBody() {
       body: "Body is here",
       subject: "Subject is here",
       hide_composer: false
+  }, (err, res) => {
+    if (err)
+      console.log('error: ', err);
+
+    console.log('res: ', res);
   });
 }
 
