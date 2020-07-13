@@ -812,6 +812,9 @@ function addTopic() {
   });
 }
 
+/*
+ * Composer
+ */
 function composeEmail() {
   let recipient = 'jason@frontapp.com';
   Front.compose({
@@ -821,6 +824,14 @@ function composeEmail() {
 }
 
 function composeSms() {
+  let recipient = '+14156199776';
+  Front.compose({
+    from: '+14153017372',
+    to: [recipient]
+  });
+}
+
+function composeSmsWithBody() {
   let recipient = '+14156199776';
   Front.compose({
       from: '+14153017372',
