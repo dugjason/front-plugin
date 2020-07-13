@@ -832,19 +832,23 @@ function composeSms() {
 }
 
 function composeSmsWithBody() {
-  let recipient = '+14156199776';
-  Front.compose({
-      from: '+14153017372',
-      to: [recipient],
-      body: "Body is here",
-      subject: "Subject is here",
-      hide_composer: false
-  }, (err, res) => {
-    if (err)
-      console.log('error: ', err);
+  try {
+    let recipient = '+14156199776';
+    Front.compose({
+        from: '+14153017372',
+        to: [recipient],
+        body: "Body is here",
+        subject: "Subject is here",
+        hide_composer: false
+    }, (err, res) => {
+      if (err)
+        console.log('error: ', err);
 
-    console.log('res: ', res);
-  });
+      console.log('res: ', res);
+    });
+  } catch(err) {
+    console.log('caught error: ', err);
+  }
 }
 
 function openURL() {
