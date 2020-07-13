@@ -815,6 +815,10 @@ function addTopic() {
 /*
  * Composer
  */
+ function composeEmpty() {
+  Front.compose({});
+}
+
 function composeEmail() {
   let recipient = 'jason@frontapp.com';
   Front.compose({
