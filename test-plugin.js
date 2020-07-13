@@ -823,8 +823,11 @@ function composeEmail() {
 function composeSms() {
   let recipient = '+14156199776';
   Front.compose({
-    from: '+14153017372',
-    to: [recipient]
+      from: '+14153017372',
+      to: [recipient],
+      body: "Body is here",
+      subject: "Subject is here",
+      hide_composer: false
   });
 }
 
